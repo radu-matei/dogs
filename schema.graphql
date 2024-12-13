@@ -5,3 +5,12 @@ type TableName @table @export {
     name: String # we can define any other attributes here
     tag: String @indexed # we can specify any attributes that should be indexed
 }
+
+type Dog @table @export {
+	id: ID @primaryKey
+	name: String @indexed
+	breed: String @indexed
+	owner: String
+	age: Int
+	tricks: [String]
+}
